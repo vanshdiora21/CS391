@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume • Projects</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Projects</h1>
+        <p>Selected work and a multifunction calculator per assignment.</p>
+    </header>
+
+    <div class="region">
+        <nav>
+            <ul>
+                <li><a href="home-resume.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="exmployment.html">Experience</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="credits.html">Credits</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Portfolio Links</h2>
+                <p>Add project summaries and repository links here.</p>
+            </section>
+
+            <section>
+                <h2>Calculator</h2>
+                <div class="calc">
+                    <div class="row">
+                        <input type="text" id="first-number" placeholder="First number">
+                        <input type="text" id="second-number" placeholder="Second number">
+                    </div>
+                    <div class="row">
+                        <button onclick="addition()">+</button>
+                        <button onclick="subtraction()">−</button>
+                        <button onclick="multiplication()">×</button>
+                        <button onclick="division()">÷</button>
+                        <button onclick="power()">x^y</button>
+                        <button onclick="clearCalculator()">Clear</button>
+                    </div>
+                    <div class="output" id="output"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&#169; 2025 • <a href="credits.html">Credits</a></p>
+    </footer>
+</div>
+<script src="assets/calculator.js"></script>
+</body>
+</html>
