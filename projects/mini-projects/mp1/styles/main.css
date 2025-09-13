@@ -1,97 +1,378 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* Universal Reset - Always Required */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic Typography */
+/* Base Typography */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: calc(14px + 0.5vw);
     line-height: 1.6;
-}
-
-/* Header Styling */
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-/* Navigation Styling */
-nav {
-    background-color: #444;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: center;
-}
-
-nav li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ccc;
-}
-
-/* Main Content */
-main {
-    min-height: 50vh;
-    padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-main h2 {
+    background-color: #f5f5f5;
     color: #333;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #444;
-    padding-bottom: 10px;
 }
 
-main img {
-    max-width: 300px;
-    height: auto;
-    border: 3px solid #333;
-    margin: 20px 0;
+/* Main Container - Responsive wrapper with margins */
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop Layout - Screens bigger than 750px */
+@media screen and (min-width: 751px) {
+    /* Flexbox container for desktop layout */
+    .desktop-container {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex: 1;
+    }
+
+    /* Header - Left aligned on desktop */
+    header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: calc(24px + 1.5vw);
+        font-weight: 700;
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
+    }
+
+    header p {
+        font-size: calc(14px + 0.3vw);
+        font-weight: 300;
+        opacity: 0.9;
+    }
+
+    /* Navigation - Vertical, 30% width on desktop */
+    nav {
+        width: 30%;
+        background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+        padding: 0;
+        position: sticky;
+        top: 0;
+        height: fit-content;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 20px 25px;
+        font-weight: 500;
+        font-size: calc(14px + 0.2vw);
+        transition: all 0.3s ease;
+        border-left: 4px solid transparent;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left: 4px solid white;
+        padding-left: 30px;
+    }
+
+    /* Main Content - 70% width on desktop */
+    main {
+        width: 70%;
+        padding: 40px;
+        background-color: #ffffff;
+        overflow-y: auto;
+    }
+}
+
+/* Mobile Layout - Screens smaller than 750px */
+@media screen and (max-width: 750px) {
+    /* Header - Center aligned on mobile */
+    header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 25px 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: calc(20px + 2vw);
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    header p {
+        font-size: calc(12px + 1vw);
+        font-weight: 300;
+        opacity: 0.9;
+    }
+
+    /* Navigation - Horizontal, 100% width on mobile */
+    nav {
+        width: 100%;
+        background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+        padding: 0;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        min-width: max-content;
+    }
+
+    nav li {
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    nav a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        font-weight: 500;
+        font-size: calc(12px + 0.5vw);
+        transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
+    }
+
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-bottom: 3px solid white;
+    }
+
+    /* Main Content - 100% width on mobile */
+    main {
+        width: 100%;
+        padding: 30px 20px;
+        background-color: #ffffff;
+    }
+}
+
+/* Common Main Content Styles */
+main h2 {
+    color: #2d3748;
+    font-size: calc(18px + 0.8vw);
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4facfe;
+    position: relative;
+}
+
+main h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+main h3 {
+    color: #4a5568;
+    font-size: calc(16px + 0.4vw);
+    font-weight: 600;
+    margin: 25px 0 15px 0;
+}
+
+main h4 {
+    color: #667eea;
+    font-size: calc(14px + 0.3vw);
+    font-weight: 500;
+    margin: 20px 0 10px 0;
 }
 
 main p {
     margin-bottom: 15px;
     text-align: justify;
+    color: #4a5568;
+    font-size: calc(13px + 0.2vw);
+    line-height: 1.7;
 }
 
-/* Footer */
+main ul, main ol {
+    margin: 15px 0 15px 30px;
+}
+
+main li {
+    margin-bottom: 8px;
+    color: #4a5568;
+    font-size: calc(13px + 0.2vw);
+    line-height: 1.6;
+}
+
+/* Image Styling */
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    display: block;
+}
+
+@media screen and (min-width: 751px) {
+    main img {
+        max-width: 300px;
+        float: left;
+        margin: 0 30px 20px 0;
+    }
+}
+
+/* Links Styling */
+main a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+main a:hover {
+    color: #764ba2;
+    border-bottom: 1px solid #764ba2;
+}
+
+/* Reference and Document Sections */
+.reference {
+    background-color: #f8fafc;
+    border-left: 4px solid #4facfe;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.reference h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.reference p {
+    margin-bottom: 8px;
+}
+
+.reference em {
+    color: #667eea;
+    font-style: italic;
+}
+
+/* Calculator Space Styling */
+#calculator-space {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 40px 0;
+    text-align: center;
+    color: white;
+}
+
+#calculator-space h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: calc(16px + 0.6vw);
+}
+
+#calculator-space p {
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+}
+
+/* Footer Styling */
 footer {
-    background-color: #333;
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+    padding: 25px 20px;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: calc(12px + 0.3vw);
+    font-weight: 400;
 }
 
 footer a {
-    color: #ccc;
-    text-decoration: underline;
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00f2fe;
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: calc(12px + 1vw);
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    main h2 {
+        font-size: calc(16px + 1.2vw);
+    }
+
+    nav a {
+        padding: 12px 15px;
+        font-size: calc(11px + 1vw);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Print Styles */
+@media print {
+    nav, footer {
+        display: none;
+    }
+
+    main {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    body {
+        background: white !important;
+        box-shadow: none !important;
+    }
 }
