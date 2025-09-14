@@ -31,28 +31,86 @@
 
             <h3>Machine Learning Trading System</h3>
             <p><strong>Technologies:</strong> Python, Machine Learning, Financial Analysis, Monte Carlo Simulation</p>
-            <p>Developed a comprehensive trading system with backtesting capabilities, implementing Heston model integration with Monte Carlo simulation. Created modular components including strategy.py for trading logic, backtester.py for performance testing, metrics.py for statistical analysis, and plotting.py for data visualization using plotly. The system demonstrates advanced quantitative finance concepts combined with machine learning techniques.</p>
+            <p>Developed a comprehensive trading system with backtesting capabilities, implementing Heston model integration with Monte Carlo simulation. Created modular components including strategy.py for trading logic, backtester.py for performance testing, metrics.py for statistical analysis, and plotting.py for data visualization using plotly.</p>
 
             <h3>Sweetgreen Financial Valuation Model</h3>
             <p><strong>Technologies:</strong> Excel, Financial Modeling, DCF Analysis, Sensitivity Analysis</p>
-            <p>Created institutional-quality financial analysis and valuation model with detailed cash flow projections, store expansion analysis, and comprehensive ratio calculations. Performed sensitivity analysis, discount rate selection for multiple scenarios, and developed AUV (Average Unit Volume) calculations. The analysis aimed for hedge fund-level professional standards with quarterly data analysis from 2022-2025.</p>
+            <p>Created institutional-quality financial analysis and valuation model with detailed cash flow projections, store expansion analysis, and comprehensive ratio calculations. Performed sensitivity analysis, discount rate selection for multiple scenarios, and developed AUV calculations.</p>
 
             <h3>Excel Automation and Data Processing</h3>
             <p><strong>Technologies:</strong> Python, Pandas, Excel API, Data Analysis</p>
-            <p>Developed Python scripts for automated P&L statement processing and rent roll data extraction. Handled complex Excel formats with merged cell processing, dynamic column mapping, and tenant name extraction. Created detailed documentation and step-by-step instructions for colleagues to reproduce the automated workflows. Projects significantly improved efficiency in financial data processing tasks.</p>
+            <p>Developed Python scripts for automated P&L statement processing and rent roll data extraction. Handled complex Excel formats with merged cell processing, dynamic column mapping, and tenant name extraction.</p>
 
-            <h3>Fantasy Premier League Analytics</h3>
-            <p><strong>Technologies:</strong> Data Analysis, Sports Analytics, Python</p>
-            <p>Built comprehensive analytical tools for Fantasy Premier League team optimization and player performance analysis. Developed algorithms for player selection, captain choices, and transfer strategies based on statistical analysis and predictive modeling.</p>
-
-            <h3>Resume Optimization and Career Tools</h3>
-            <p><strong>Technologies:</strong> Data Analysis, Natural Language Processing</p>
-            <p>Created tools and methodologies for resume optimization, focusing on quantifiable achievements and ATS compatibility. Developed frameworks for crafting effective cover letters and optimizing technical skills sections for finance and technology roles.</p>
-
-            <!-- Space reserved for JavaScript Calculator -->
+            <!-- Enhanced JavaScript Calculator Section -->
             <div id="calculator-space">
-                <h3>JavaScript Calculator Project</h3>
-                <p>Interactive web-based calculator with advanced mathematical functions will be implemented here using JavaScript, HTML, and CSS. This project will demonstrate client-side programming skills and user interface design.</p>
+                <div class="calculator-header">
+                    <h3>Vansh's Interactive Calculator</h3>
+                    <p>Built with JavaScript, HTML5 & CSS3</p>
+                </div>
+
+                <div class="calculator-wrapper">
+                    <div class="calculator-body">
+                        <!-- Input Section -->
+                        <div class="input-container">
+                            <div class="input-group">
+                                <label for="first-number">First Number:</label>
+                                <input type="text" id="first-number" placeholder="Enter first number">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="second-number">Second Number:</label>
+                                <input type="text" id="second-number" placeholder="Enter second number">
+                            </div>
+                        </div>
+
+                        <!-- Button Section -->
+                        <div class="button-grid">
+                            <button class="calc-btn operation-btn" onclick="addition()">
+                                <span class="btn-symbol">+</span>
+                                <span class="btn-label">Add</span>
+                            </button>
+
+                            <button class="calc-btn operation-btn" onclick="subtraction()">
+                                <span class="btn-symbol">−</span>
+                                <span class="btn-label">Subtract</span>
+                            </button>
+
+                            <button class="calc-btn operation-btn" onclick="multiplication()">
+                                <span class="btn-symbol">×</span>
+                                <span class="btn-label">Multiply</span>
+                            </button>
+
+                            <button class="calc-btn operation-btn" onclick="division()">
+                                <span class="btn-symbol">÷</span>
+                                <span class="btn-label">Divide</span>
+                            </button>
+
+                            <button class="calc-btn power-btn" onclick="power()">
+                                <span class="btn-symbol">x^y</span>
+                                <span class="btn-label">Power</span>
+                            </button>
+
+                            <button class="calc-btn clear-btn" onclick="clear()">
+                                <span class="btn-symbol">C</span>
+                                <span class="btn-label">Clear</span>
+                            </button>
+                        </div>
+
+                        <!-- Output Section -->
+                        <div class="output-container">
+                            <div class="output-label">Result:</div>
+                            <div id="output" class="output-display">Ready for calculation</div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Elements -->
+                    <div class="calculator-decoration">
+                        <div class="math-symbol">∞</div>
+                        <div class="math-symbol">π</div>
+                        <div class="math-symbol">√</div>
+                        <div class="math-symbol">∑</div>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -61,5 +119,7 @@
         <p>All Rights Reserved &#169; Vansh Diora <a href="credits.html">Credits</a></p>
     </footer>
 </div>
+
+<script src="calculator.js"></script>
 </body>
 </html>
